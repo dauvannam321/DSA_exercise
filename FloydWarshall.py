@@ -41,9 +41,9 @@ def FloyWarshall(graph, dist, path, V):
                     dist[i][j] = dist[i][k] + dist[k][j]
                     path[i][j] = path[k][j]
 
-        for i in range(V):
-            if dist[i][i] < 0: return False
-        return True
+    for i in range(V):
+        if dist[i][i] < 0: return False
+    return True
 
 
 if __name__ == '__main__':
